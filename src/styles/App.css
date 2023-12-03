@@ -1,0 +1,239 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 68px;
+  margin-top: 20px;
+}
+header .App-Logo {
+  width: 146px;
+  pointer-events: none;
+}
+@media screen and (min-width: 767px) {
+  header .App-Logo {
+    width: 210px;
+  }
+}
+
+nav .App-Navlink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+nav a {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #ff6060;
+  text-decoration: none;
+}
+@media screen and (min-width: 767px) {
+  nav a {
+    font-size: 24px;
+  }
+}
+nav a.active {
+  border-bottom: 2px solid #ff6060;
+}
+
+.banner {
+  margin: 20px 0;
+}
+.banner-content {
+  position: relative;
+  height: 111px;
+  /* Display */
+  display: flex;
+  align-items: center;
+}
+.banner-content img {
+  border-radius: 10px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  filter: brightness(80%);
+}
+.banner-content p {
+  font-size: 24px;
+  padding: 10px;
+  width: 80%;
+  color: #ffffff;
+  position: absolute;
+}
+@media screen and (min-width: 767px) {
+  .banner-content p {
+    text-align: center;
+    font-size: 30px;
+    width: 100%;
+  }
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media screen and (min-width: 767px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.gallery .card {
+  position: relative;
+  height: 200px;
+  width: 100%;
+}
+@media screen and (min-width: 767px) {
+  .gallery .card {
+    height: 300px;
+  }
+}
+.gallery .card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  filter: brightness(80%);
+}
+.gallery .card p {
+  position: absolute;
+  bottom: 10px;
+  width: 75%;
+  color: #ffffff;
+  padding: 0 10px;
+}
+
+.collapse-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.collapse-title {
+  position: relative;
+  background: #ff6060;
+  border-radius: 5px;
+  padding: 10px 0 10px 10px;
+  color: #ffffff;
+  cursor: "pointer";
+}
+@media screen and (min-width: 767px) {
+  .collapse-title {
+    font-size: 22px;
+  }
+}
+.collapse-title .arrow-icon {
+  position: absolute;
+  top: 30%;
+  right: 15px;
+  transition: transform 0.4s ease;
+}
+.collapse-title .open {
+  transform: rotate(-180deg);
+}
+.collapse-desc {
+  padding: 20px;
+  background: #f7f7f7;
+}
+.collapse-desc p {
+  color: #ff6060;
+  font-size: 14px;
+}
+@media screen and (min-width: 767px) {
+  .collapse-desc p {
+    font-size: 22px;
+  }
+}
+
+.profile figure img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.profile h2 {
+  color: #ff6060;
+  font-size: 20px;
+}
+.profile .location {
+  color: #ff6060;
+}
+.profile .host {
+  display: flex;
+}
+.profile .host-picture {
+  width: 42px;
+  height: 42px;
+}
+.profile .host-picture img {
+  border-radius: 50px;
+  background: #c4c4c4;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.profile .host p {
+  color: #ff6060;
+}
+
+.footer-content {
+  background: #000000;
+  height: 200px;
+  /* Display */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.footer-content p {
+  color: #ffffff;
+  width: 40%;
+  text-align: center;
+}
+@media screen and (min-width: 767px) {
+  .footer-content p {
+    font-size: 22px;
+  }
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  color: #ff6060;
+  height: 720px;
+}
+.error a {
+  color: #ff6060;
+  font-size: 18px;
+}
+@media screen and (min-width: 767px) {
+  .error a {
+    font-size: 24px;
+  }
+}
+.error .code-error {
+  font-size: 96px;
+  font-weight: bold;
+}
+@media screen and (min-width: 767px) {
+  .error .code-error {
+    font-size: 230px;
+  }
+}
+.error .text-error {
+  font-size: 20px;
+}
+@media screen and (min-width: 767px) {
+  .error .text-error {
+    font-size: 36px;
+  }
+}
+
+/*# sourceMappingURL=App.css.map */

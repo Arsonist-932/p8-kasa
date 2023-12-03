@@ -1,0 +1,43 @@
+.collapse-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.collapse {
+  &-title {
+    position: relative;
+    background: #ff6060;
+    border-radius: 5px;
+    padding: 10px 0 10px 10px;
+    color: #ffffff;
+    cursor: "pointer";
+
+    @media screen and (min-width: 767px) {
+      font-size: 22px;
+    }
+
+    .arrow-icon {
+      position: absolute;
+      top: 30%;
+      right: 15px;
+      transition: transform 0.4s ease;
+    }
+
+    .open {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &-desc {
+    padding: 20px;
+    background: #f7f7f7;
+    p {
+      color: #ff6060;
+      font-size: 14px;
+      @media screen and (min-width: 767px) {
+        font-size: 22px;
+      }
+    }
+  }
+}

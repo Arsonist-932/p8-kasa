@@ -1,0 +1,39 @@
+.profile {
+  figure {
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+    }
+  }
+
+  h2 {
+    color: #ff6060;
+    font-size: 20px;
+  }
+
+  .location {
+    color: #ff6060;
+  }
+
+  .host {
+    display: flex;
+    &-picture {
+      width: 42px;
+      height: 42px;
+
+      img {
+        border-radius: 50px;
+        background: #c4c4c4;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    p {
+      color: #ff6060;
+    }
+  }
+}
