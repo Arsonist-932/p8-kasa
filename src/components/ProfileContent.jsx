@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import data from "../data/logements.json";
+import Collapse from "../components/Collapse";
 import "../styles/App.css";
 
 export default function Profile() {
@@ -17,25 +18,36 @@ export default function Profile() {
         </figure>
       </div>
 
-      <div className="title">
-        <h2>{profileData.title}</h2>
-        <p className="location">{profileData.location}</p>
+      <div className="profile-content">
+        <div className="title">
+          <h2>{profileData.title}</h2>
+          <p className="location">{profileData.location}</p>
+          <div className="tags-list">
+            {profileData.tags.map((el) => (
+              <p className="tag">{el}</p>
+            ))}
+          </div>
+        </div>
+
+        <div className="rating">
+          <div className="host">
+            <p>{profileData.host.name}</p>
+            <figure className="host-picture">
+              <img src={profileData.host.picture} alt="" />
+            </figure>
+          </div>
+          <p>{profileData.rating}</p>
+        </div>
       </div>
 
-      <p>{profileData.tags}</p>
-
-      <p>{profileData.rating}</p>
-
-      <div className="host">
-        <p>{profileData.host.name}</p>
-        <figure className="host-picture">
-          <img src={profileData.host.picture} alt="" />
-        </figure>
-      </div>
-
-      <div className="collapse">
-        <p>{profileData.description}</p>
-        <p>{profileData.equipments}</p>
+      <div className="profile-collapse">
+        <Collapse title="Description" text={profileData.description} />
+        <Collapse
+          title="Equipements"
+          text={profileData.equipments.map((el) => (
+            <li>{el}</li>
+          ))}
+        />
       </div>
     </div>
   );

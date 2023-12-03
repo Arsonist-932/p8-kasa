@@ -147,6 +147,14 @@ nav a.active {
   }
 }
 
+.profile figure {
+  height: 260px;
+}
+@media screen and (min-width: 767px) {
+  .profile figure {
+    height: 640px;
+  }
+}
 .profile figure img {
   object-fit: cover;
   width: 100%;
@@ -157,25 +165,92 @@ nav a.active {
   color: #ff6060;
   font-size: 20px;
 }
-.profile .location {
+@media screen and (min-width: 767px) {
+  .profile h2 {
+    font-size: 36px;
+  }
+}
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+@media screen and (min-width: 767px) {
+  .profile-content {
+    flex-direction: row;
+  }
+}
+.profile-content .location {
   color: #ff6060;
 }
-.profile .host {
-  display: flex;
+@media screen and (min-width: 767px) {
+  .profile-content .location {
+    font-size: 20px;
+  }
 }
-.profile .host-picture {
+.profile-content .tags-list {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+.profile-content .tags-list .tag {
+  background: #ff6060;
+  color: #ffffff;
+  border-radius: 10px;
+  height: 25px;
+  width: 110px;
+  text-align: center;
+}
+.profile .rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+@media screen and (min-width: 767px) {
+  .profile .rating {
+    flex-direction: column;
+  }
+}
+.profile .rating .host {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.profile .rating .host-picture {
   width: 42px;
   height: 42px;
 }
-.profile .host-picture img {
+@media screen and (min-width: 767px) {
+  .profile .rating .host-picture {
+    width: 70px;
+    height: 70px;
+  }
+}
+.profile .rating .host-picture img {
   border-radius: 50px;
   background: #c4c4c4;
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
-.profile .host p {
+.profile .rating .host p {
   color: #ff6060;
+}
+@media screen and (min-width: 767px) {
+  .profile .rating .host p {
+    font-size: 20px;
+  }
+}
+.profile-collapse {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media screen and (min-width: 767px) {
+  .profile-collapse {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .footer-content {
