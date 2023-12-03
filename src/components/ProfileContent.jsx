@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import data from "../data/logements.json";
 import Collapse from "../components/Collapse";
+import Slider from "../components/Slider";
 import "../styles/App.css";
 
 export default function Profile() {
