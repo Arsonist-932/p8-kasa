@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import data from "../data/logements.json";
 import Collapse from "../components/Collapse";
 import Slider from "../components/Slider";
+import Rating from "../components/Rating";
 import "../styles/App.css";
 
 export default function Profile() {
@@ -14,9 +15,7 @@ export default function Profile() {
   return (
     <div className="profile">
       <div className="cover">
-        <figure>
-          <img src={profileData.cover} alt={profileData.title} />
-        </figure>
+        <Slider data={profileData} />
       </div>
 
       <div className="profile-content">
@@ -25,7 +24,7 @@ export default function Profile() {
           <p className="location">{profileData.location}</p>
           <div className="tags-list">
             {profileData.tags.map((el) => (
-              <p className="tag">{el}</p>
+              <div className="tag">{el}</div>
             ))}
           </div>
         </div>
@@ -37,7 +36,7 @@ export default function Profile() {
               <img src={profileData.host.picture} alt="" />
             </figure>
           </div>
-          <p>{profileData.rating}</p>
+          <Rating rating={profileData.rating} />
         </div>
       </div>
 

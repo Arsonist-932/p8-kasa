@@ -1,0 +1,28 @@
+.cover {
+  figure {
+    height: 260px;
+    position: relative;
+
+    @media screen and (min-width: 767px) {
+      height: 415px;
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+    }
+  }
+
+  .Arrow_Left,
+  .Arrow-Right {
+    padding: 0 15px;
+    position: absolute;
+    top: 40%;
+  }
+
+  .Arrow-Right {
+    right: 0;
+  }
+}

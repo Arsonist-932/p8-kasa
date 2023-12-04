@@ -152,20 +152,6 @@ nav a.active {
   }
 }
 
-.profile figure {
-  height: 260px;
-}
-@media screen and (min-width: 767px) {
-  .profile figure {
-    height: 640px;
-  }
-}
-.profile figure img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-}
 .profile h2 {
   color: #ff6060;
   font-size: 20px;
@@ -188,6 +174,7 @@ nav a.active {
 }
 .profile-content .location {
   color: #ff6060;
+  margin-top: 10px;
 }
 @media screen and (min-width: 767px) {
   .profile-content .location {
@@ -196,21 +183,30 @@ nav a.active {
 }
 .profile-content .tags-list {
   display: flex;
-  gap: 10px;
-  margin: 10px 0;
+  gap: 15px;
+  margin: 17px 0;
 }
 .profile-content .tags-list .tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #ff6060;
   color: #ffffff;
   border-radius: 10px;
   height: 25px;
-  width: 110px;
-  text-align: center;
+  padding: 15px;
+}
+@media screen and (min-width: 767px) {
+  .profile-content .tags-list .tag {
+    height: 35px;
+    padding: 20px;
+  }
 }
 .profile .rating {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
+  padding: 0 10px;
 }
 @media screen and (min-width: 767px) {
   .profile .rating {
@@ -256,6 +252,31 @@ nav a.active {
   .profile-collapse {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+.rating-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.rating-item {
+  margin: 15px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.star-filled {
+  color: #ff6060;
+}
+
+.star-empty {
+  color: #e3e3e3;
+}
+
+.star-filled,
+.star-empty {
+  font-size: 38px;
 }
 
 .footer-content {
@@ -314,6 +335,31 @@ nav a.active {
   .error .text-error {
     font-size: 36px;
   }
+}
+
+.cover figure {
+  height: 260px;
+  position: relative;
+}
+@media screen and (min-width: 767px) {
+  .cover figure {
+    height: 415px;
+  }
+}
+.cover figure img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.cover .Arrow_Left,
+.cover .Arrow-Right {
+  padding: 0 15px;
+  position: absolute;
+  top: 40%;
+}
+.cover .Arrow-Right {
+  right: 0;
 }
 
 /*# sourceMappingURL=App.css.map */

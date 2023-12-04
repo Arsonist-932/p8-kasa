@@ -1,0 +1,23 @@
+.rating-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.rating-item {
+  margin: 15px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.star-filled {
+  color: #ff6060;
+}
+
+.star-empty {
+  color: #e3e3e3;
+}
+
+.star-filled,
+.star-empty {
+  font-size: 38px;
+}
