@@ -36,6 +36,7 @@ nav a {
 }
 nav a.active {
   border-bottom: 2px solid #ff6060;
+  transition: border-bottom 0.4s ease-in-out;
 }
 
 .banner {

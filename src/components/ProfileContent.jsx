@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import data from "../data/logements.json";
 import Collapse from "../components/Collapse";
 import Slider from "../components/Slider";
@@ -12,6 +12,11 @@ export default function Profile() {
   // Récupération des id du logement.
   const profileData = data.find((el) => el.id === id);
 
+  if (!profileData) {
+    // You can customize the path to your 404 page
+    return <Navigate to="/Error404" />;
+  }
+
   return (
     <div className="profile">
       <div className="cover">
@@ -23,8 +28,10 @@ export default function Profile() {
           <h2>{profileData.title}</h2>
           <p className="location">{profileData.location}</p>
           <div className="tags-list">
-            {profileData.tags.map((el) => (
-              <div className="tag">{el}</div>
+            {profileData.tags.map((el, index) => (
+              <div className="tag" key={index}>
+                {el}
+              </div>
             ))}
           </div>
         </div>
@@ -44,8 +51,8 @@ export default function Profile() {
         <Collapse title="Description" text={profileData.description} />
         <Collapse
           title="Equipements"
-          text={profileData.equipments.map((el) => (
-            <li>{el}</li>
+          text={profileData.equipments.map((el, index) => (
+            <li key={index}>{el}</li>
           ))}
         />
       </div>

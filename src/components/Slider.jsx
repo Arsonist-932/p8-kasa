@@ -1,4 +1,3 @@
-// Slider.js
 import React, { useState } from "react";
 import ArrowLeft from "../assets/images/arrow_left.png";
 import ArrowRight from "../assets/images/arrow_right.png";
@@ -16,6 +15,15 @@ export default function Slider({ data }) {
       (currentIndex - 1 + data.pictures.length) % data.pictures.length;
     setCurrentIndex(newIndex);
   };
+
+  // Render nothing if there's only one image
+  if (data.pictures.length <= 1) {
+    return (
+      <figure>
+        <img src={data.pictures[0]} alt="" />
+      </figure>
+    );
+  }
 
   return (
     <figure>
