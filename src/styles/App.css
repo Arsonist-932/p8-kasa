@@ -185,7 +185,7 @@ nav a.active {
 .profile-content .tags-list {
   display: flex;
   gap: 15px;
-  margin: 17px 0;
+  margin: 20px 0;
 }
 .profile-content .tags-list .tag {
   display: flex;
@@ -207,17 +207,24 @@ nav a.active {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  padding: 0 10px;
 }
 @media screen and (min-width: 767px) {
   .profile .rating {
     flex-direction: column;
+    justify-content: center;
   }
 }
 .profile .rating .host {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
+  width: 130px;
+  padding: 0px 4px;
+}
+@media screen and (min-width: 768px) {
+  .profile .rating .host {
+    width: 180px;
+  }
 }
 .profile .rating .host-picture {
   width: 42px;
@@ -233,11 +240,18 @@ nav a.active {
   border-radius: 50px;
   background: #c4c4c4;
   object-fit: cover;
-  width: 100%;
-  height: 100%;
+  width: 42px;
+  height: 42px;
+}
+@media screen and (min-width: 767px) {
+  .profile .rating .host-picture img {
+    width: 70px;
+    height: 70px;
+  }
 }
 .profile .rating .host p {
   color: #ff6060;
+  text-align: end;
 }
 @media screen and (min-width: 767px) {
   .profile .rating .host p {
@@ -262,7 +276,6 @@ nav a.active {
 }
 
 .rating-item {
-  margin: 15px 0;
   display: flex;
   justify-content: flex-end;
 }
@@ -277,7 +290,13 @@ nav a.active {
 
 .star-filled,
 .star-empty {
-  font-size: 38px;
+  font-size: 30px;
+}
+@media screen and (min-width: 767px) {
+  .star-filled,
+  .star-empty {
+    font-size: 40px;
+  }
 }
 
 .footer-content {

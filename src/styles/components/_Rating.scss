@@ -4,7 +4,6 @@
   flex-wrap: wrap;
 }
 .rating-item {
-  margin: 15px 0;
   display: flex;
   justify-content: flex-end;
 }
@@ -19,5 +18,9 @@
 
 .star-filled,
 .star-empty {
-  font-size: 38px;
+  font-size: 30px;
+
+  @media screen and (min-width: 767px) {
+    font-size: 40px;
+  }
 }
