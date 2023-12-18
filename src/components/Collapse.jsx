@@ -3,26 +3,26 @@ import React, { useState } from "react";
 import Arrow from "../assets/images/arrow_collapse.png";
 
 export default function Collapse({ title, text }) {
-  const [collapse, setIsOpen] = useState(false);
+  const [IsCollapseOpen, setIsCollapseOpen] = useState(false);
 
   const toggleCollapse = () => {
-    setIsOpen(!collapse);
+    setIsCollapseOpen(!IsCollapseOpen);
   };
 
   return (
     <div className="collapse">
       <div
-        className={`collapse-title ${collapse ? "open" : ""}`}
+        className={`collapse-title ${IsCollapseOpen ? "open" : ""}`}
         onClick={toggleCollapse}
       >
         {title}
         <img
-          className={`arrow-icon ${collapse ? "open" : ""}`}
+          className={`arrow-icon ${IsCollapseOpen ? "open" : ""}`}
           src={Arrow}
           alt="Arrow"
         />
       </div>
-      {collapse && (
+      {IsCollapseOpen && (
         <div className="collapse-desc">
           <p>{text}</p>
         </div>

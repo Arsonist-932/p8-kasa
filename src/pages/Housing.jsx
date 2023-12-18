@@ -1,12 +1,12 @@
 import React from "react";
-import ProfileContent from "../components/ProfileContent";
+import Housing from "../components/Housing";
 import "../styles/App.css";
 
 export default function Profile() {
   return (
     <>
       <main>
-        <ProfileContent />
+        <Housing />
       </main>
     </>
   );

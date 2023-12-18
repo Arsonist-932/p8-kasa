@@ -27,23 +27,30 @@
     }
 
     .tags-list {
-      display: flex;
-      gap: 15px;
-      margin: 20px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin: 20px 0px;
+      gap: 10px;
+
+      @media screen and (min-width: 1024px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      }
 
       .tag {
+        /* Display */
         display: flex;
         align-items: center;
         justify-content: center;
         background: #ff6060;
-        color: #ffffff;
         border-radius: 10px;
-        height: 25px;
-        padding: 15px;
+        /* Text */
+        font-size: 13px;
+        color: #ffffff;
+        height: 35px;
+        padding: 3px 9px;
 
         @media screen and (min-width: 767px) {
-          height: 35px;
-          padding: 20px;
+          font-size: 15px;
         }
       }
     }

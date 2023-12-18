@@ -1,9 +1,9 @@
 import React from "react";
 import { useParams, Navigate } from "react-router-dom";
 import data from "../data/logements.json";
-import Collapse from "../components/Collapse";
-import Slider from "../components/Slider";
-import Rating from "../components/Rating";
+import Collapse from "./Collapse";
+import Slider from "./Slider";
+import Rating from "./Rating";
 import "../styles/App.css";
 
 export default function Profile() {

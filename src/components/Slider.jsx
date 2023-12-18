@@ -16,7 +16,6 @@ export default function Slider({ data }) {
     setCurrentIndex(newIndex);
   };
 
-  // Render nothing if there's only one image
   if (data.pictures.length <= 1) {
     return (
       <figure>
