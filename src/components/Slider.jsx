@@ -31,6 +31,13 @@ export default function Slider({ data }) {
       <div className="Arrow_Left" onClick={prevSlide}>
         <img src={ArrowLeft} alt="Previous" />
       </div>
+
+      <div className="counter">
+        <p>
+          {currentIndex + 1} / {data.pictures.length}
+        </p>
+      </div>
+
       <div className="Arrow-Right" onClick={nextSlide}>
         <img src={ArrowRight} alt="Next" />
       </div>

@@ -389,5 +389,11 @@ nav a.active {
 .cover .Arrow-Right {
   right: 0;
 }
-
-/*# sourceMappingURL=App.css.map */
+.cover .counter {
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+}/*# sourceMappingURL=App.css.map */
